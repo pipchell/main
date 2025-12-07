@@ -14,9 +14,7 @@
     font-weight: 700;
 }
 
-* {
-    box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
 body {
     margin: 0;
@@ -33,8 +31,8 @@ body {
     max-width: 900px;
     margin: auto;
     padding: 20px;
-    text-align: center;
     flex: 1;
+    text-align: center;
 }
 
 h1 {
@@ -45,24 +43,37 @@ h1 {
     font-size: 50px;
 }
 
-/* Boxes */
-.location-link, .request-box {
+/* Grid for locations */
+.location-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+/* Link buttons */
+.location-link {
+    text-decoration: none;
     display: block;
-    width: 100%; /* full width like bins */
-    margin: 25px 0;
+}
+
+.link-box {
+    background: #111;
+    padding: 35px;
     border-radius: 12px;
+    border: 4px solid #333;
+    transition: 0.2s;
     text-align: center;
 }
 
-.link-box, .request-box {
-    padding: 35px;
-    border: 6px solid #333;
-    background: #111;
+.link-box span {
+    display: block;
+    width: 100%;
+    height: 100%;
     font-family: 'LeagueSpartan', sans-serif;
     font-weight: 700;
-    color: #fff;
+    color: #ffffff;
     font-size: 28px;
-    transition: 0.2s;
 }
 
 .link-box:hover {
@@ -70,8 +81,20 @@ h1 {
     cursor: pointer;
 }
 
+/* Request box */
+.request-box {
+    background: #222;
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 12px;
+    border: 4px solid #444;
+    font-family: 'LeagueSpartan';
+}
+
 .request-box a {
     color: #17D860;
+    font-weight: 700;
+    font-size: 28px;
     text-decoration: underline;
 }
 
@@ -92,7 +115,6 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-    .wrapper { padding: 15px; }
     h1 { font-size: 44px; }
     .link-box, .request-box { padding: 36px; font-size: 20px; }
     footer { font-size: 20px; }
@@ -104,17 +126,19 @@ footer {
 <div class="wrapper">
     <h1>Bin Collections</h1>
 
-    <a href="https://maidstone.rpcgroup.xyz" class="location-link">
-        <div class="link-box"><span>Maidstone</span></div>
-    </a>
+    <div class="location-grid">
+        <a href="https://maidstone.rpcgroup.xyz" class="location-link">
+            <div class="link-box"><span>Maidstone</span></div>
+        </a>
 
-    <a href="https://royston.rpcgroup.xyz" class="location-link">
-        <div class="link-box"><span>Royston</span></div>
-    </a>
+        <a href="https://royston.rpcgroup.xyz" class="location-link">
+            <div class="link-box"><span>Royston</span></div>
+        </a>
 
-    <a href="https://kenilworth.rpcgroup.xyz" class="location-link">
-        <div class="link-box"><span>Kenilworth</span></div>
-    </a>
+        <a href="https://kenilworth.rpcgroup.xyz" class="location-link">
+            <div class="link-box"><span>Kenilworth</span></div>
+        </a>
+    </div>
 
     <div class="request-box">
         <p>Request a new location:</p>
@@ -125,6 +149,7 @@ footer {
 </div>
 
 <footer>Pip Chell - V4.6</footer>
+
 <h6 class="bottom-note">
     This Is Not An Official Service.
 </h6>
