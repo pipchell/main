@@ -32,17 +32,14 @@ body {
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1200px; 
     margin: auto;
     padding: 20px;
-    text-align: center;
-    flex: 1; /* allow wrapper to expand and push footer down */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex: 1; /* Grow to fill space and push footer down */
 }
 
 h1 {
+    text-align: center;
     font-family: 'LeagueSpartan';
     font-weight: 700;
     margin-bottom: 40px;
@@ -56,13 +53,11 @@ h1 {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
     width: 100%;
-    justify-items: center;
 }
 
 /* Link buttons */
 .location-link {
     text-decoration: none;
-    width: 100%;
 }
 
 .link-box {
@@ -116,7 +111,6 @@ footer {
     margin-top: 40px;
 }
 
-/* Bottom note */
 .bottom-note {
     text-align: center;
     font-family: 'LeagueSpartan', sans-serif;
