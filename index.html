@@ -19,22 +19,24 @@ body {
     padding: 0;
     background: #000;
     color: white;
-    font-family: 'LeagueSpartan', Arial, sans-serif;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
-    text-align: center;
 }
 
 .wrapper {
-    flex: 1;
     width: 100%;
     max-width: 700px;
-    padding: 20px;
     margin: 0 auto;
+    padding: 30px;
+    flex: 1;
+    text-align: center;
 }
 
 h1 {
+    font-family:'LeagueSpartan';
+    font-weight:700;
     font-size: 48px;
     margin-bottom: 40px;
     color: #17D860;
@@ -56,6 +58,7 @@ h1 {
     color: white !important;
     font-size: 40px;
     text-decoration: none !important;
+    font-family:'LeagueSpartan';
 }
 
 .link-box:hover {
@@ -63,46 +66,60 @@ h1 {
     cursor: pointer;
 }
 
-/* Footer fixed at bottom via flexbox */
+/* Request box */
+.req-box {
+    background: #0c0c0c;
+    border: 3px solid #17D860;
+    padding: 25px;
+    border-radius: 12px;
+    margin-top: 40px;
+    font-family:'LeagueSpartan';
+    font-size: 22px;
+    color: white;
+}
+
+/* Footer stuck to bottom */
 footer {
-    padding: 25px 10px;
+    text-align:center;
+    font-family:'LeagueSpartan';
+    font-size:22px;
     margin-top: 20px;
 }
 
-footer h1 {
-    margin: 0;
-    font-size: 26px;
-    color: #17D860;
-}
-
 footer h6 {
-    margin: 5px 0 0 0;
-    font-size: 16px;
-    color: white;
+    text-align:center;
+    font-family:'LeagueSpartan', sans-serif;
+    font-weight:700;
+    margin-top:10px;
+    font-size:16px;
 }
 </style>
 </head>
 <body>
 
 <div class="wrapper">
+
     <h1>RPCgroup Bin Collections</h1>
 
     <a href="https://maidstone.rpcgroup.xyz">
-        <div class="link-box">
-            <span>Maidstone</span>
-        </div>
+        <div class="link-box"><span>Maidstone</span></div>
     </a>
 
     <a href="https://royston.rpcgroup.xyz">
-        <div class="link-box">
-            <span>Royston</span>
-        </div>
+        <div class="link-box"><span>Royston</span></div>
     </a>
+
+    <div class="req-box">
+        Email <b>bins@rpcgroup.xyz</b> to request a new location.
+    </div>
+
 </div>
 
 <footer>
-    <h1>Pip Chell - V4.6</h1>
-    <h6>This Is Not An Official Service.</h6>
+    Pip Chell - V4.6
+    <h6>
+        This Is Not An Official Service.
+    </h6>
 </footer>
 
 </body>
