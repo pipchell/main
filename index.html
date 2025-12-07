@@ -24,7 +24,7 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .wrapper {
@@ -39,27 +39,35 @@ h1 {
     color: #17D860;
 }
 
+/* Whole box is now clickable */
 .link-box {
     background: #111;
     padding: 30px;
     margin: 20px 0;
     border-radius: 12px;
     border: 4px solid #333;
+    transition: 0.2s;
 }
 
-a {
+.link-box a {
+    display: block;
+    width: 100%;
+    height: 100%;
     color: white;
     font-size: 32px;
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
+/* Hover effect */
+.link-box:hover {
+    background: #222;
+    cursor: pointer;
 }
 
 footer {
     margin-top: 40px;
     font-size: 18px;
+    line-height: 1.6;
 }
 </style>
 </head>
@@ -68,15 +76,22 @@ footer {
 <div class="wrapper">
     <h1>RPCgroup Bin Collections</h1>
 
-    <div class="link-box">
-        <a href="https://maidstone.rpcgroup.xyz">Maidstone</a>
-    </div>
+    <a href="https://maidstone.rpcgroup.xyz">
+        <div class="link-box">
+            Maidstone
+        </div>
+    </a>
 
-    <div class="link-box">
-        <a href="https://royston.rpcgroup.xyz">Royston</a>
-    </div>
+    <a href="https://royston.rpcgroup.xyz">
+        <div class="link-box">
+            Royston
+        </div>
+    </a>
 
-    <footer>Pip Chell - Directory</footer>
+    <footer>
+        Pip Chell - V4.6<br>
+        This Is Not An Official Service.
+    </footer>
 </div>
 
 </body>
