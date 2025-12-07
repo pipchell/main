@@ -22,16 +22,13 @@ body {
     background: #000;
     color: white;
     font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 
 .wrapper {
-    max-width: 1200px;
+    max-width: 1200px; /* wider container */
     margin: auto;
     padding: 20px;
-    flex: 1;
 }
 
 h1 {
@@ -48,14 +45,12 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 25px;
-    width: 100%; /* ensure grid spans full wrapper width */
+    width: 100%;
 }
 
 /* Link buttons */
 .location-link {
     text-decoration: none;
-    display: block;
-    width: 100%;
 }
 
 .link-box {
@@ -68,7 +63,7 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100%; /* Fill the grid cell */
+    height: 100%;
 }
 
 .link-box span {
